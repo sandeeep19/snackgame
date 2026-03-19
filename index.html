@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Arcade</p>
+            <h1>Snake</h1>
+          </div>
+          <div class="scoreboard">
+            <div>
+              <span class="scoreboard__label">Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span class="scoreboard__label">Best</span>
+              <strong id="best-score">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-row">
+          <p id="status" class="status">Press any arrow key to start.</p>
+          <div class="actions">
+            <button id="pause-button" type="button">Pause</button>
+            <button id="restart-button" type="button">Restart</button>
+          </div>
+        </div>
+
+        <div
+          id="board"
+          class="board"
+          role="grid"
+          aria-label="Snake game board"
+        ></div>
+
+        <div class="controls">
+          <button class="control control--up" type="button" data-direction="up" aria-label="Move up">▲</button>
+          <button class="control control--left" type="button" data-direction="left" aria-label="Move left">◀</button>
+          <button class="control control--down" type="button" data-direction="down" aria-label="Move down">▼</button>
+          <button class="control control--right" type="button" data-direction="right" aria-label="Move right">▶</button>
+        </div>
+
+        <p class="hint">
+          Use arrow keys or WASD. Press space to pause or resume.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+  </html>
